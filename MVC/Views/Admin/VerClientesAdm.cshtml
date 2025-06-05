@@ -1,0 +1,42 @@
+﻿@using Dominio;
+
+@if (ViewBag.error != null)
+{
+	<div class="alert-danger">@ViewBag.error</div>
+}
+else
+{
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Documento</th>
+				<th>Nombre</th>
+				<th>Nacionalidad</th>
+				<th>Mail</th>
+				<th>Password</th>
+				<th>Puntos / Elegible</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (Cliente unC in ViewBag.ListaClientes)
+			{
+				<tr>
+					<td>@unC.Documento</td>
+					<td>@unC.Nombre</td>
+					<td>@unC.Nacionalidad</td>
+					<td>@unC.Mail</td>
+					<td>@unC.Password</td>
+					@if(unC is Premium premium)
+					{
+						<td>@premium.Puntos</td>
+					}
+					@if (unC is Ocasionales ocasional)
+					{
+						<td>@ocasional.Elegible</td>
+					}
+
+				</tr>
+			}
+		</tbody>
+	</table>
+}

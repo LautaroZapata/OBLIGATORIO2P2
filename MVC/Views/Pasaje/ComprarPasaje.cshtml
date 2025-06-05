@@ -1,0 +1,14 @@
+﻿@using Dominio
+
+<h1>Detalle de vuelo</h1>
+
+<form method="post">
+	<input type="text" placeholder="Ingrese una fecha" name="Fecha"/> <br />
+	<select>
+		@foreach(Equipaje unE in Enum.GetValues<Equipaje>())
+		{
+			<option value="@unE">@unE</option>
+		}
+		
+	</select>
+</form>

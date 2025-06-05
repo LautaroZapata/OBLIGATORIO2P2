@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yovng\\Downloads\\OBLIGATORIO1P22025-main\\OBLIGATORIO1P22025-main\\Dominio\\Dominio.csproj": {}
+    "C:\\Development\\OBLIGATORIO2P2\\Dominio\\Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yovng\\Downloads\\OBLIGATORIO1P22025-main\\OBLIGATORIO1P22025-main\\Dominio\\Dominio.csproj": {
+    "C:\\Development\\OBLIGATORIO2P2\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yovng\\Downloads\\OBLIGATORIO1P22025-main\\OBLIGATORIO1P22025-main\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Development\\OBLIGATORIO2P2\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\yovng\\Downloads\\OBLIGATORIO1P22025-main\\OBLIGATORIO1P22025-main\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\Development\\OBLIGATORIO2P2\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\yovng\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yovng\\Downloads\\OBLIGATORIO1P22025-main\\OBLIGATORIO1P22025-main\\Dominio\\obj\\",
+        "outputPath": "C:\\Development\\OBLIGATORIO2P2\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -157,7 +157,7 @@ namespace Dominio
             AgregarPasaje(DevolverVuelo("AR102"), new DateTime(2025, 5, 13), DevolverCliente("valen.rios@example.com"), Equipaje.BODEGA, 300);
             AgregarPasaje(DevolverVuelo("AR103"), new DateTime(2025, 5, 14), DevolverCliente("diegomez@example.com"), Equipaje.CABINA, 270);
             AgregarPasaje(DevolverVuelo("AR104"), new DateTime(2025, 5, 15), DevolverCliente("camila.silva@example.com"), Equipaje.BODEGA, 320);
-            AgregarPasaje(DevolverVuelo("AR105"), new DateTime(2025, 5, 16), DevolverCliente("felipe.travels@example.com"), Equipaje.CABINA, 310);
+            AgregarPasaje(DevolverVuelo("AR105"), new DateTime(2025, 5, 16), DevolverCliente("felipe.travelz@example.com"), Equipaje.CABINA, 310);
             AgregarPasaje(DevolverVuelo("AR106"), new DateTime(2025, 5, 17), DevolverCliente("lucia.mendez@example.com"), Equipaje.BODEGA, 290);
             AgregarPasaje(DevolverVuelo("AR107"), new DateTime(2025, 5, 17), DevolverCliente("marcos.viaja@example.com"), Equipaje.CABINA, 280);
             AgregarPasaje(DevolverVuelo("AR108"), new DateTime(2025, 5, 17), DevolverCliente("sofia.ruta@example.com"), Equipaje.CABINA, 260);
@@ -166,7 +166,7 @@ namespace Dominio
             AgregarPasaje(DevolverVuelo("AR111"), new DateTime(2025, 5, 13), DevolverCliente("valen.rios@example.com"), Equipaje.BODEGA, 330);
             AgregarPasaje(DevolverVuelo("AR112"), new DateTime(2025, 5, 16), DevolverCliente("diegomez@example.com"), Equipaje.CABINA, 220);
             AgregarPasaje(DevolverVuelo("AR113"), new DateTime(2025, 5, 17), DevolverCliente("camila.silva@example.com"), Equipaje.BODEGA, 210);
-            AgregarPasaje(DevolverVuelo("AR114"), new DateTime(2025, 5, 18), DevolverCliente("felipe.travels@example.com"), Equipaje.CABINA, 280);
+            AgregarPasaje(DevolverVuelo("AR114"), new DateTime(2025, 5, 18), DevolverCliente("felipe.travelz@example.com"), Equipaje.CABINA, 280);
             AgregarPasaje(DevolverVuelo("AR115"), new DateTime(2025, 5, 19), DevolverCliente("lucia.mendez@example.com"), Equipaje.BODEGA, 270);
             AgregarPasaje(DevolverVuelo("AR116"), new DateTime(2025, 5, 13), DevolverCliente("marcos.viaja@example.com"), Equipaje.CABINA, 350);
             AgregarPasaje(DevolverVuelo("AR117"), new DateTime(2025, 5, 14), DevolverCliente("sofia.ruta@example.com"), Equipaje.BODEGA, 290);
@@ -175,7 +175,7 @@ namespace Dominio
             AgregarPasaje(DevolverVuelo("AR120"), new DateTime(2025, 5, 17), DevolverCliente("valen.rios@example.com"), Equipaje.CABINA, 270);
             AgregarPasaje(DevolverVuelo("AR121"), new DateTime(2025, 5, 18), DevolverCliente("diegomez@example.com"), Equipaje.BODEGA, 310);
             AgregarPasaje(DevolverVuelo("AR122"), new DateTime(2025, 5, 19), DevolverCliente("camila.silva@example.com"), Equipaje.CABINA, 300);
-            AgregarPasaje(DevolverVuelo("AR123"), new DateTime(2025, 5, 13), DevolverCliente("felipe.travels@example.com"), Equipaje.BODEGA, 290);
+            AgregarPasaje(DevolverVuelo("AR123"), new DateTime(2025, 5, 13), DevolverCliente("felipe.travelz@example.com"), Equipaje.BODEGA, 290);
             AgregarPasaje(DevolverVuelo("AR124"), new DateTime(2025, 5, 14), DevolverCliente("lucia.mendez@example.com"), Equipaje.CABINA, 280);
             AgregarPasaje(DevolverVuelo("AR125"), new DateTime(2025, 5, 15), DevolverCliente("joaquin.aventura@example.com"), Equipaje.BODEGA, 320);
             AgregarPasaje(DevolverVuelo("AR125"), new DateTime(2025, 5, 15), DevolverCliente("joaquin.aventura@example.com"), Equipaje.BODEGA, 2000);
@@ -415,6 +415,19 @@ namespace Dominio
             }
         }
 
+
+        public List<Pasaje> PasajesPorCliente(Cliente unC)
+        {
+            List<Pasaje> aux = new List<Pasaje>();
+            foreach(Pasaje unP in ListarPasajesPerecioDesc())
+            {
+                if(unC.Documento == unP.Pasajero.Documento)
+                {
+                    aux.Add(unP);
+                }
+            }
+            return aux;
+        }
 
 
 
