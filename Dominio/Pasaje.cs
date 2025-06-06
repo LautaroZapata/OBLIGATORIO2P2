@@ -16,9 +16,12 @@ namespace Dominio
         Cliente pasajero;
         Equipaje equipaje;
         decimal precio;
+        public static int orden = 0;
 
-        
 
+
+
+        public static int Orden { get => orden; set => orden = value; }
         public int Id { get => id; set => id = value; }
         public static int UltimoId { get => ultimoId; set => ultimoId = value; }
         public Vuelo Vuelo { get => vuelo; set => vuelo = value; }
@@ -66,7 +69,15 @@ namespace Dominio
         public int CompareTo(Pasaje otro)
         {
             if (otro == null) return 1;
-            return otro.Precio.CompareTo(this.Precio);
+            if (Orden == 0) // 0 es cliente
+            {
+                return otro.Precio.CompareTo(this.Precio);
+            } else
+            {
+                return Fecha.CompareTo(otro.Fecha);
+
+            }
+
         }
 
        
@@ -77,18 +88,18 @@ namespace Dominio
     Creamos esta clase especifica para poder realizar el sort con criterios diferentes y poder realizar los ordenamientos 
     correspondientes de la misma clase 
     */
-    public class CompareToPorFecha : IComparer<Pasaje>
-    {
-        private DateTime fecha;
+    //public class CompareToPorFecha : IComparer<Pasaje>
+    //{
+    //    private DateTime fecha;
         
-        public DateTime Fecha { get => fecha; set => fecha = value; }
+    //    public DateTime Fecha { get => fecha; set => fecha = value; }
         
-        public int Compare(Pasaje? pasaje1, Pasaje? pasaje2)
-        {
-            if (pasaje1 == null || pasaje2 == null ) return 1;
-            return pasaje1.Fecha.CompareTo(pasaje2.Fecha);
-        }
-    }
+    //    public int Compare(Pasaje? pasaje1, Pasaje? pasaje2)
+    //    {
+    //        if (pasaje1 == null || pasaje2 == null ) return 1;
+    //        return pasaje1.Fecha.CompareTo(pasaje2.Fecha);
+    //    }
+    //}
    
 
 }

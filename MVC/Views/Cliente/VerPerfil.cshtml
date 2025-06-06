@@ -14,22 +14,16 @@ else
 				<th>Precio</th>
 				<th>Vuelo</th>
 				<th>Equipaje</th>
-				<th>Email</th>
+				<th>Nombre</th>
 
 			</tr>
 		</thead>
 		<tbody>
-			@foreach (Pasaje unPasaje in ViewBag.ListaPasajes)
-			{
-				<tr>
-					<td>@unPasaje.Id</td>
-					<td>@unPasaje.Fecha</td>
-					<td>@unPasaje.Precio</td>
-					<td>@unPasaje.Vuelo</td>
-					<td>@unPasaje.Equipaje</td>
-					<td>@unPasaje.Pasajero.Mail</td>
-				</tr>
-			}
+			<tr>
+				<td>@ViewBag.Usuario.Nombre</td>
+				
+			</tr>
 		</tbody>
 	</table>
 }
+

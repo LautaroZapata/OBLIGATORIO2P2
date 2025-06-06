@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxWZXJQYXNhamVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Development/OBLIGATORIO2P2/MVC/Views/Cliente/VerPerfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxWZXJQZXJmaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Development/OBLIGATORIO2P2/MVC/Views/Cliente/VerVuelos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxWZXJWdWVsb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

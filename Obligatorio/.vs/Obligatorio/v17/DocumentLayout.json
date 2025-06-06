@@ -3,10 +3,16 @@
   "WorkspaceRootPath": "C:\\Development\\OBLIGATORIO2P2\\Obligatorio\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio2p2\\mvc\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio2p2\\mvc\\views\\cliente\\verperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6EF3569D-F78D-4EEE-B3D3-C33253154829}|..\\Dominio\\Dominio.csproj|c:\\development\\obligatorio2p2\\dominio\\sistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio2p2\\mvc\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E5683B6-1B88-4CD4-A7DB-2F361E5A9FF7}|..\\MVC\\MVC.csproj|c:\\development\\obligatorio2p2\\mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -16,32 +22,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Development\\OBLIGATORIO2P2\\MVC\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "..\\MVC\\Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\Development\\OBLIGATORIO2P2\\MVC\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "..\\MVC\\Controllers\\ClienteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAB3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T02:01:48.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Sistema.cs",
               "DocumentMoniker": "C:\\Development\\OBLIGATORIO2P2\\Dominio\\Sistema.cs",
               "RelativeDocumentMoniker": "..\\Dominio\\Sistema.cs",
               "ToolTip": "C:\\Development\\OBLIGATORIO2P2\\Dominio\\Sistema.cs",
               "RelativeToolTip": "..\\Dominio\\Sistema.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwE0AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAIsBAAAAAAAAAAAgwJgBAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T01:58:52.268Z",
+              "WhenOpened": "2025-06-06T01:23:32.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO2P2\\MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\MVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Development\\OBLIGATORIO2P2\\MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\MVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwCQAAACEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T01:23:03.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VerPerfil.cshtml",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO2P2\\MVC\\Views\\Cliente\\VerPerfil.cshtml",
+              "RelativeDocumentMoniker": "..\\MVC\\Views\\Cliente\\VerPerfil.cshtml",
+              "ToolTip": "C:\\Development\\OBLIGATORIO2P2\\MVC\\Views\\Cliente\\VerPerfil.cshtml",
+              "RelativeToolTip": "..\\MVC\\Views\\Cliente\\VerPerfil.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T01:20:05.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Development\\OBLIGATORIO2P2\\MVC\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "..\\MVC\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Development\\OBLIGATORIO2P2\\MVC\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "..\\MVC\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAEMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T01:17:17.077Z",
               "EditorCaption": ""
             }
           ]

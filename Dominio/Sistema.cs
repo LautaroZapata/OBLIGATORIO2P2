@@ -362,6 +362,31 @@ namespace Dominio
             throw new Exception("El cliente no existe");
         }
 
+        public Premium DevolverPremium(string mail)
+        {
+            List<Premium> aux = ListarClientesPremium();
+            foreach (Premium unCliente in aux)
+            {
+                if (unCliente.Mail == mail)
+                {
+                    return unCliente;
+                }
+            }
+            throw new Exception("El cliente no existe");
+        }
+        public Ocasionales DevolverOcasional(string mail)
+        {
+            List<Ocasionales> aux = ListarClientesOcasionales();
+            foreach (Ocasionales unCliente in aux)
+            {
+                if (unCliente.Mail == mail)
+                {
+                    return unCliente;
+                }
+            }
+            throw new Exception("El cliente no existe");
+        }
+
         public Cliente? DevolverCliente(string Mail, string Password)
         {
             List<Cliente> aux = ListarClientes();
@@ -378,6 +403,15 @@ namespace Dominio
 			foreach (Usuario unUser in aux)
 			{
 				if (unUser.Password == Password && unUser.Mail == Mail) return unUser;
+			}
+			return null;
+		}
+        public Usuario? DevolverUsuarioPorMail(string Mail)
+		{
+			List<Usuario> aux = ListarUsuarios();
+			foreach (Usuario unUser in aux)
+			{
+				if (unUser.Mail == Mail) return unUser;
 			}
 			return null;
 		}
@@ -419,7 +453,7 @@ namespace Dominio
         public List<Pasaje> PasajesPorCliente(Cliente unC)
         {
             List<Pasaje> aux = new List<Pasaje>();
-            foreach(Pasaje unP in ListarPasajesPerecioDesc())
+            foreach(Pasaje unP in ListarPasajesPrecioDesc())
             {
                 if(unC.Documento == unP.Pasajero.Documento)
                 {
@@ -429,7 +463,17 @@ namespace Dominio
             return aux;
         }
 
+        public void ModificarPuntos(int puntos, string email)
+        {
+            Premium unC = DevolverPremium(email);
+            unC.Puntos = puntos;
+        }
 
+        public void ModificarElegible(bool elegible, string email)
+        {
+            Ocasionales unC = DevolverOcasional(email);
+            unC.Elegible = elegible;
+        }
 
         #endregion
 
@@ -445,8 +489,29 @@ namespace Dominio
             return listaClientes;
 
         }
+        public List<Premium> ListarClientesPremium()
+        {
+            List<Premium> listaClientes = new List<Premium>();
+            foreach (Usuario unUser in listaUsuarios)
+            {
+                if (unUser is Premium) listaClientes.Add((Premium)unUser);
 
-		public List<Usuario> ListarUsuarios()
+            }
+            return listaClientes;
+        }
+        public List<Ocasionales> ListarClientesOcasionales()
+        {
+            List<Ocasionales> listaClientes = new List<Ocasionales>();
+            foreach (Usuario unUser in listaUsuarios)
+            {
+                if (unUser is Ocasionales) listaClientes.Add((Ocasionales)unUser);
+
+            }
+            return listaClientes;
+        }
+
+
+        public List<Usuario> ListarUsuarios()
 		{
 			
 			return listaUsuarios;
@@ -493,7 +558,7 @@ namespace Dominio
             return aux;
         }
 
-        public List<Pasaje> ListarPasajesPerecioDesc()
+        public List<Pasaje> ListarPasajesPrecioDesc()
         {
             listaPasajes.Sort();
             return listaPasajes;
@@ -501,7 +566,8 @@ namespace Dominio
 
         public List<Pasaje> ListarPasajesPorFecha()
         {
-            listaPasajes.Sort(new CompareToPorFecha());
+            //listaPasajes.Sort(new CompareToPorFecha());
+            listaPasajes.Sort();
             return listaPasajes;
         }
 

@@ -40,6 +40,7 @@ namespace MVC.Controllers
             {
                 Sistema unS = Sistema.Instancia;
                 string mailCliente = HttpContext.Session.GetString("Mail");
+                Pasaje.Orden = 0;
                 List<Pasaje> listaP = unS.PasajesPorCliente(unS.DevolverCliente(mailCliente));
                 ViewBag.ListaPasajes = listaP;
                 if (listaP.Count == 0)
@@ -51,6 +52,24 @@ namespace MVC.Controllers
                 ViewBag.error = "Acceso no autorizado";
             }
 
+            return View();
+        }
+
+        public IActionResult VerPerfil()
+        {
+            if (HttpContext.Session.GetString("Rol") == null) return Redirect("/Login/Login");
+            if (HttpContext.Session.GetString("Rol") == "Premium" || HttpContext.Session.GetString("Rol") == "Ocasional")
+            {
+                Sistema unS = Sistema.Instancia;
+                Usuario unC = unS.DevolverUsuarioPorMail(HttpContext.Session.GetString("Mail"));
+                ViewBag.Usuario = unC;
+                
+            }
+            else
+            {
+                ViewBag.error = "Acceso no autorizado";
+
+            }
             return View();
         }
     }
